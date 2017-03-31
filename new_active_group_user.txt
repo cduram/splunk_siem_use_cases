@@ -1,0 +1,3 @@
+User added to a Windows Active Directory group:
+
+sourcetype=WinEventLog:Security EventCode=4728 Group_Name="<group_name>" | stats count by "tgt_user", "src_user", "ComputerName", "user_group"
